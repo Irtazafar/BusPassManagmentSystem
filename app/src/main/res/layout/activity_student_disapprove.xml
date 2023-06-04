@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentDisapproveActivity">
+
+    <TextView
+        android:id="@+id/registertxtview"
+        android:layout_width="279dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="57dp"
+        android:elegantTextHeight="false"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
+        android:text="Information"
+        android:textColor="@color/BlueBack"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        app:flow_verticalAlign="baseline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
+
+    <!-- Roll Number Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/rollNumberInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registertxtview">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rollNumFeild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Roll Number"
+            android:textColor="@color/BlueBack" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rollNumberInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Name"
+            android:inputType="text"
+            android:textColor="@color/BlueBack" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Contact Number Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contactNumberInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contactField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Contact Number"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:textColor="@color/BlueBack" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Email Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailInputLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contactNumberInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/BlueBack" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cancelRegisterBtn"
+        android:layout_width="366dp"
+        android:layout_height="66dp"
+        android:backgroundTint="@color/BlueBack"
+        android:text="Cancel Registration"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailInputLayout"
+        app:layout_constraintVertical_bias="0.337" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
