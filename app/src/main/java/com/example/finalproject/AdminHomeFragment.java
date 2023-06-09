@@ -30,7 +30,7 @@ public class AdminHomeFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    Button buttonLogout,pendingRegistration,pendingRequest;
+    Button buttonLogout,pendingRegistration;
 
     public AdminHomeFragment() {
         // Required empty public constructor
@@ -70,7 +70,6 @@ public class AdminHomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_admin_home, container, false);
         buttonLogout = view.findViewById(R.id.buttonlogoutadminhome);
         pendingRegistration = view.findViewById(R.id.viewPendingRegistrationsButton);
-        pendingRequest = view.findViewById(R.id.viewPendingRequestsButton);
 
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,16 +83,10 @@ public class AdminHomeFragment extends Fragment {
         pendingRegistration.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Create new fragment and transaction
                 Fragment newFragment = new PendingRegistrationFragment();
                 FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-                // Replace whatever is in the fragment_container view with this fragment,
-                // and add the transaction to the back stack
                 transaction.replace(R.id.adminmainmaincontainer, newFragment);
                 transaction.addToBackStack(null);
-
-                // Commit the transaction
                 transaction.commit();
             }
         });

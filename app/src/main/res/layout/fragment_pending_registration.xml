@@ -4,7 +4,10 @@
     android:id="@+id/listview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PendingRegistrationFragment">
+    tools:context=".PendingRegistrationFragment"
+    android:backgroundTint="@color/white"
+    android:background="@color/white"
+    android:padding="10dp">
 
     <ListView
         android:id="@+id/reglistview"

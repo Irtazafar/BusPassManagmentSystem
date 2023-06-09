@@ -4,52 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AdminHomeFragment">
+    tools:context=".AdminHomeFragment"
+    android:backgroundTint="@color/white"
+    android:background="@color/white">
 
-    <Button
-        android:id="@+id/viewPendingRegistrationsButton"
-        android:layout_width="306dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="144dp"
-        android:background="@drawable/borderbutton"
-        android:text="View Pending Registrations"
-        android:textColor="@color/white"
-        android:textSize="15sp"
+    <TextView
+        android:id="@+id/headingTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Home"
+        android:textColor="@color/BlueBack"
+        android:textSize="40sp"
         android:textStyle="bold"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/viewPendingRequestsButton"
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/adminimagebackground"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:alpha="0.6"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/viewPendingRegistrationsButton"
         android:layout_width="306dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="104dp"
-        android:background="@drawable/borderbutton"
-        android:text="View Pending Requests"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/BlueBack"
+        android:text="View Pending Registrations"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold"
+        app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPendingRegistrationsButton" />
+        app:layout_constraintTop_toBottomOf="@+id/headingTextView" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonlogoutadminhome"
         android:layout_width="306dp"
-        android:layout_height="52dp"
-        android:background="@drawable/borderbutton"
+        android:layout_height="68dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="192dp"
+        android:alpha="0.8"
+        android:backgroundTint="@color/BlueBack"
         android:text="Logout"
         android:textColor="@color/white"
         android:textSize="15sp"
-        android:textStyle="bold"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewPendingRequestsButton"
-        app:layout_constraintVertical_bias="0.425" />
+        app:layout_constraintTop_toBottomOf="@+id/viewPendingRegistrationsButton"
+        app:layout_constraintVertical_bias="1.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

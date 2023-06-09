@@ -2,23 +2,78 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label="Triptix"
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject"
         tools:targetApi="31">
         <activity
+            android:name=".StudentApprovedRequestActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".PassUpdateActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".StudentNewPassActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".UpdateStudentDetailsActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".BusUpdateDetailActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ShowAllBusesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UpdateBusActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".AddNewBusActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".StudentDisapproveActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentMainScreen"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".AdminMainScreen"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".RegisterScreen"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".LoginScreen"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
@@ -29,6 +84,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_launcher_background" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/BlueBack" />
+
     </application>
 
 </manifest>

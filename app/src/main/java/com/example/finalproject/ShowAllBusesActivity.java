@@ -62,7 +62,6 @@ public class ShowAllBusesActivity extends AppCompatActivity {
 
                             }
                             adapter = new BusFirebaseAdapter(getApplicationContext(), arrayList);
-                            //adapter = new BusFirebaseAdapter(getApplicationContext(), arrayList,new Bus);
                             recyclerView.setAdapter(adapter);
                             adapter.notifyDataSetChanged();
 

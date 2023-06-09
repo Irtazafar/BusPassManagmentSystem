@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentDisapproveActivity">
+    tools:context=".StudentDisapproveActivity"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/registertxtview"
@@ -120,10 +121,11 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/cancelRegisterBtn"
-        android:layout_width="366dp"
-        android:layout_height="66dp"
+        android:layout_width="292dp"
+        android:layout_height="68dp"
         android:backgroundTint="@color/BlueBack"
         android:text="Cancel Registration"
+        app:cornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"

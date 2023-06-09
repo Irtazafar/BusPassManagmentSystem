@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddNewBusActivity">
+    tools:context=".AddNewBusActivity"
+    android:backgroundTint="@color/white"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/addBusTextView"
@@ -50,7 +52,8 @@
             android:id="@+id/busNoEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Bus Number" />
+            android:hint="Enter Bus Number"
+            android:inputType="number" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,7 +84,8 @@
             android:id="@+id/driverNoEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Driver Number" />
+            android:hint="Enter Driver Number"
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -138,13 +142,14 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/addNewBusButton"
-        android:layout_width="367dp"
-        android:layout_height="58dp"
+        android:layout_width="278dp"
+        android:layout_height="61dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="@color/BlueBack"
         android:text="Add New Bus"
+        app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusTextView" />

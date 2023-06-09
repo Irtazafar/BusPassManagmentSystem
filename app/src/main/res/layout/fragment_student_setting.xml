@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentSettingFragment"
+    android:backgroundTint="@color/white"
+    android:background="@color/white">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/studentbackground"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:alpha="0.6"/>
+
+    <TextView
+        android:id="@+id/bustxtview"
+        android:layout_width="279dp"
+        android:layout_height="66dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:elegantTextHeight="false"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
+        android:text="Settings"
+        android:textColor="@color/BlueBack"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck,TextSizeCheck" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/studentUpdateBtn"
+        android:layout_width="287dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="116dp"
+        android:backgroundTint="@color/BlueBack"
+        android:text="Update Details"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bustxtview"
+        app:cornerRadius="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/studentPasswordBtn"
+        android:layout_width="287dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/BlueBack"
+        android:text="Change Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentUpdateBtn"
+        app:cornerRadius="30dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/studentLogoutBtn"
+        android:layout_width="287dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/BlueBack"
+        android:text="Logout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/studentPasswordBtn"
+        app:layout_constraintVertical_bias="0.0"
+        app:cornerRadius="30dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,12 +1,18 @@
 package com.example.finalproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.button.MaterialButton;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +29,8 @@ public class ViewAllBusDetailsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    MaterialButton addBtn,updateBtn,showBtn;
 
     public ViewAllBusDetailsFragment() {
         // Required empty public constructor
@@ -58,7 +66,33 @@ public class ViewAllBusDetailsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_all_bus_details, container, false);
+        View view = inflater.inflate(R.layout.fragment_view_all_bus_details, container, false);
+        addBtn = view.findViewById(R.id.addBusButton);
+        updateBtn = view.findViewById(R.id.UpdateBusButton);
+        showBtn = view.findViewById(R.id.ShowBusButton);
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), AddNewBusActivity.class));
+            }
+        });
+
+        updateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), UpdateBusActivity.class));
+            }
+        });
+
+        showBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), ShowAllBusesActivity.class));
+            }
+        });
+
+
+        return view;
     }
 }

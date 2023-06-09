@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BusUpdateDetailActivity">
+    android:padding="10dp"
+    tools:context=".BusUpdateDetailActivity"
+    android:backgroundTint="@color/white"
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/addBusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Update Bus Details"
         android:textSize="32sp"
         android:textStyle="bold"
         android:textColor="@color/BlueBack"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
@@ -49,7 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter Bus Number"
-            android:enabled="false"/>
+            android:textColor="@color/BlueBack"
+            android:enabled="false"
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -80,7 +84,8 @@
             android:id="@+id/driverText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Driver Number" />
+            android:hint="Enter Driver Number"
+            android:inputType="number"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -132,26 +137,28 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Approve"
+        android:backgroundTint="@color/BlueBack"
         app:layout_constraintBaseline_toBaselineOf="@+id/statusTextView"
         app:layout_constraintStart_toEndOf="@+id/statusTextView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/updateBtn"
-        android:layout_width="367dp"
-        android:layout_height="58dp"
+        android:layout_width="274dp"
+        android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="24dp"
         android:backgroundTint="@color/BlueBack"
         android:text="Update Details"
+        app:cornerRadius="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/statusTextView" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/deleteBusBtn"
-        android:layout_width="367dp"
-        android:layout_height="58dp"
+        android:layout_width="274dp"
+        android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="48dp"
         android:layout_marginEnd="24dp"
@@ -161,6 +168,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/updateBtn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        app:cornerRadius="30dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
